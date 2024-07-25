@@ -15,7 +15,13 @@
                 <TextField fx:id="studentID" maxWidth="120"/>
             </children>
         </HBox>
-        <Button text="remove" alignment="CENTER" maxWidth="200" onAction="#onRemoveStudentAction"/>
+        <HBox alignment="CENTER" spacing="5.0">
+            <children>
+                <Button text="back" alignment="CENTER" minWidth="100" onAction="#onRemoveBackAction"/>
+                <Button text="remove" alignment="CENTER" minWidth="100" onAction="#onRemoveStudentAction"/>
+            </children>
+        </HBox>
+
         <Label fx:id="message" alignment="CENTER" maxWidth="200"/>
     </children>
 

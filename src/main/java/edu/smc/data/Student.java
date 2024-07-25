@@ -125,7 +125,8 @@ public class Student extends User implements Person {
 
     @Override
     public String toString() {
-        return "Student: " + firstName + " " + lastName + ", ID: " + studentID + "#";
+        return   "[ "+ firstName + ", " + lastName + ", " + studentID +
+                ", " + phoneNumber +", " + address + ", "+ major + " ]" + "#";
     }
 
     @Override

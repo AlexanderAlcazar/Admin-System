@@ -10,6 +10,7 @@
     <children>
         <Button text="add" alignment="CENTER" onAction="#onAddAction" maxWidth="200" />
         <Button text="remove" alignment="CENTER" onAction="#onRemoveAction" maxWidth="200" />
+        <Button text="back" alignment="CENTER" maxWidth="200" onAction="#onBackAction"/>
         <Label fx:id="message" alignment="CENTER" maxWidth="200"/>
 
     </children>

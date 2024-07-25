@@ -1,4 +1,3 @@
-Ashley,King,1089237,555-5679,951 Willow St,Electrical Engineering,1089237@smc.edu,student
 Daniel,Garcia,1072895,555-7890,753 Willow St,English,1072895@smc.edu,student
 Amanda,Lee,1075439,555-6540,963 Oak St,Music,1075439@smc.edu,student
 David,Wilson,1067349,555-3456,987 Cedar St,Physics,1067349@smc.edu,student

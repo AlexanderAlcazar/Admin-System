@@ -6,40 +6,81 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.collections.FXCollections?>
 <VBox alignment="CENTER" spacing="5.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="edu.smc.javafx.JavaFXController">
     <children>
         <HBox alignment="CENTER" spacing="5.0">
             <children>
                 <Label text="First Name: " maxWidth="120"/>
-                <TextField fx:id="firstName" maxWidth="120"/>
+                <TextField fx:id="firstName" minWidth="100"/>
             </children>
         </HBox>
         <HBox alignment="CENTER" spacing="5.0">
             <children>
                 <Label text="Last Name: " maxWidth="120"/>
-                <TextField fx:id="lastName" maxWidth="120"/>
+                <TextField fx:id="lastName" minWidth="100"/>
             </children>
         </HBox>
         <HBox alignment="CENTER" spacing="5.0">
             <children>
                 <Label text="Phone: " maxWidth="120"/>
-                <TextField fx:id="phoneNumber" maxWidth="120"/>
+                <TextField fx:id="phoneNumber" minWidth="100"/>
             </children>
         </HBox>
         <HBox alignment="CENTER" spacing="5.0">
             <children>
                 <Label text="Address: " maxWidth="120"/>
-                <TextField fx:id="address" maxWidth="120"/>
+                <TextField fx:id="address" minWidth="100"/>
             </children>
         </HBox>
         <HBox alignment="CENTER" spacing="5.0">
             <children>
                 <Label text="Major: " maxWidth="120"/>
-                <TextField fx:id="major" maxWidth="120"/>
+                <ComboBox fx:id="dropDown" minWidth="160">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Accounting"/>
+                            <String fx:value="Anthropology"/>
+                            <String fx:value="Architecture"/>
+                            <String fx:value="Art"/>
+                            <String fx:value="Astronomy"/>
+                            <String fx:value="Biology"/>
+                            <String fx:value="Business"/>
+                            <String fx:value="Chemistry"/>
+                            <String fx:value="Communications"/>
+                            <String fx:value="Computer Science"/>
+                            <String fx:value="Economics"/>
+                            <String fx:value="Education"/>
+                            <String fx:value="Engineering"/>
+                            <String fx:value="English"/>
+                            <String fx:value="Literature"/>
+                            <String fx:value="Geography"/>
+                            <String fx:value="Geology"/>
+                            <String fx:value="History"/>
+                            <String fx:value="Twitter"/>
+                            <String fx:value="Linguistics"/>
+                            <String fx:value="Mathematics"/>
+                            <String fx:value="Music"/>
+                            <String fx:value="Nursing"/>
+                            <String fx:value="Nutrition"/>
+                            <String fx:value="Political Science"/>
+                            <String fx:value="Psychology"/>
+                            <String fx:value="Physics"/>
+                            <String fx:value="Philosophy"/>
+                            <String fx:value="Theater"/>
+                            <String fx:value="Undeclared"/>
+                        </FXCollections>
+                    </items>
+                </ComboBox>
             </children>
         </HBox>
-        <Button text="add" alignment="CENTER" maxWidth="200" onAction="#onAddStudentAction"/>
+        <HBox alignment="CENTER" spacing="5.0">
+            <children>
+                <Button text="back" alignment="CENTER" minWidth="100" onAction="#onAddBackAction"/>
+                <Button text="add" alignment="CENTER" minWidth="100" onAction="#onAddStudentAction"/>
+            </children>
+        </HBox>
         <Label fx:id="message" alignment="CENTER" maxWidth="200"/>
     </children>
 </VBox>
