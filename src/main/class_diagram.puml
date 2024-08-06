@@ -1,0 +1,169 @@
+@startuml
+abstract class Application {
+    +void start(Stage stage)
+}
+
+abstract class User {
+    -String username
+    -String password
+    +String getUsername()
+    +void setUsername(String username)
+    +String getPassword()
+    +void setPassword(String password)
+    +boolean verify(String username, String password)
+}
+
+interface Person {
+    +{abstract} String getFirstName()
+    +{abstract} void setFirstName(String)
+    +{abstract} String getLastName()
+    +{abstract} void setLastName(String)
+    +{abstract} String getPhoneNumber()
+    +{abstract} void setPhoneNumber(String)
+    +{abstract} String getAddress()
+    +{abstract} void setAddress(String)
+}
+
+class Administrator
+class Database {
+    -static final String DATA_FILE_NAME
+    -Set<Student> studentList
+    +Database()
+    +boolean addStudent(String firstname, String lastname, String phoneNumber, String address, String major)
+    +boolean removeStudent(int studentID)
+    +Student getStudent(int studentID)
+    +String listStudents()
+    +boolean verify(String username, String password)
+    -int generateID()
+    +void loadData()
+    -Student parseData(String[] data)
+    +void saveData()
+    -String toDataRecord(Student student)
+}
+
+class Student {
+    -static DEFAULT_PASSWORD
+    -String firstName
+    -String lastName
+    -int studentID
+    -String phoneNumber
+    -String address
+    -String major
+    +String generateStudentEmail(int studentID)
+    +int getStudentID()
+    +String getFirstName()
+    +void setFirstName(String firstName)
+    +String getLastName()
+    +void setLastName(String lastName)
+    +String getPhoneNumber()
+    +void setPhoneNumber(String phoneNumber)
+    +String getAddress()
+    +void setAddress(String address)
+    +String getMajor()
+    +void setMajor(String major)
+    +String toString()
+    +boolean equals(Object o)
+    +int hashCode()
+}
+
+class JavaFXApplication {
+    +{static} void main(String[] args)
+}
+
+class JavaFXController {
+    -static final String CMD_LOGIN
+    -static final String CMD_ADD
+    -static final String CMD_REMOVE
+    -static final String CMD_LIST
+    -static final String SUCCESS
+    -static final String FAIL
+    -static final String ADMIN
+    -static final String STUDENT
+    -static final String SERVER_IP
+    -static final int SERVER_PORT
+    -ComboBox<String> dropDown
+    -TextField username
+    -PasswordField password
+    -TextField firstName
+    -TextField lastName
+    -TextField studentID
+    -TextField phoneNumber
+    -TextField address
+    -CheckBox isAdmin
+    -Label message
+    -String userKey
+    -Client client
+    +void onLoginAction(ActionEvent event)
+    -void loadAdminView(Window window)
+    +void onModifyAction(ActionEvent event)
+    -void loadModifyView(Window window)
+    +void onRemoveAction(ActionEvent event)
+    -void loadRemoveView(Window window)
+    +void onAddAction(ActionEvent event)
+    -void loadAddView(Window window)
+    +void onListAction(ActionEvent event)
+    -void loadListView(Window window)
+    +void onAddStudentAction(ActionEvent event)
+    +void onRemoveStudentAction(ActionEvent event)
+    -void loadStudentView(Window window)
+    +void onLogoutAction(ActionEvent event)
+    -void loadInitialView(Window window)
+    +void onBackAction(ActionEvent event)
+    +void onRemoveBackAction(ActionEvent event)
+    +void onAddBackAction(ActionEvent event)
+}
+
+class Client {
+    -Socket socket
+    -BufferedReader in
+    -PrintWriter out
+    +void sendToServer(String message)
+    +String readFromServer()
+}
+
+class Server {
+    -static final String CMD_LOGIN
+    -static final String CMD_ADD
+    -static final String CMD_REMOVE
+    -static final String CMD_LIST
+    -static final String SUCCESS
+    -static final String FAIL
+    -static final String ADMIN
+    -static final String STUDENT
+    -ServerSocket serverSocket
+    -Socket clientSocket
+    -PrintWriter out
+    -BufferedReader in
+    -Database data
+    -Administrator admin
+    +void start(int port)
+    -void prepareServer(int port) throws IOException
+    -void processClientRequests() throws IOException
+    -void establishClientConnection() throws IOException
+    -void processClientMessages() throws IOException
+    -void processClientMessage(String inputLine)
+    -void processLoginCommand(String[] parse)
+    -void processAddCommand(String[] parse)
+    -void processRemoveCommand(String[] parse)
+    -void processInfoCommand(String[] parse)
+    -String buildStudentInfo(Student student)
+    +void stop()
+    +static void main(String[] args)
+}
+
+interface AutoCloseable {
+    +void close()
+}
+
+Server -> Database
+Server --> Administrator : 1
+Database "1" *-- "many" Student : studentList
+Student --|> User : extends
+Administrator --|> User : extends
+Student --|> Person : implements
+JavaFXApplication --|> Application : implements
+JavaFXController --> Client
+Client --> Server : requests
+Client <-- Server : responses
+AutoCloseable <|-- Client : implements
+@enduml

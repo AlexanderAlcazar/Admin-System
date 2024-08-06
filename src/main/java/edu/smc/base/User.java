@@ -77,15 +77,6 @@ public abstract class User {
         return this.username.equals(username) && this.password.equals(password);
     }
 
-    /**
-     * Overriding toString() method to show user's information.
-     *
-     * @return A string representation of the user.
-     */
-    @Override
-    public String toString() {
-        return "Username: " + username + ", Password: " + password + "\n";
-    }
 
     /**
      * Overriding equals() method for user object comparison based on username and password.

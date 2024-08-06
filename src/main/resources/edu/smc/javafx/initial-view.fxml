@@ -28,7 +28,7 @@
     </children>
     <HBox alignment="CENTER" spacing="5" >
         <children>
-            <Label text="Admin:"/>
+            <Label text="Admin"/>
             <CheckBox fx:id="isAdmin"/>
             <Button text="Login" alignment="CENTER" minWidth="120" onAction="#onLoginAction"/>
         </children>

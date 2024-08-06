@@ -1,0 +1,17 @@
+@startuml
+       actor User
+       participant "JavaFXApplication" as App
+       participant "JavaFXController" as Controller
+       participant "Server" as Server
+       participant "Database" as Database
+
+       User -> App : Enter login credentials
+       App -> Controller : onLoginAction()
+       Controller -> Server : sendToServer(request)
+       Server -> Database : verify(username, password)
+       Database -->> Server : return result
+       Server -->> Controller : readFromServer()
+       Controller -> Controller : process login result
+       Controller -> App : loadAdminView()
+       Controller -> App : loadStudentView()
+       @enduml

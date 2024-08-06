@@ -1,3 +1,4 @@
+Alexander,Alcazar,8362140,840-9576,205 s McKinley ave,Computer Science,8362140@smc.edu,student
 Daniel,Garcia,1072895,555-7890,753 Willow St,English,1072895@smc.edu,student
 Amanda,Lee,1075439,555-6540,963 Oak St,Music,1075439@smc.edu,student
 David,Wilson,1067349,555-3456,987 Cedar St,Physics,1067349@smc.edu,student
@@ -16,4 +17,3 @@ Elizabeth,Young,1067895,555-8907,147 Cedar St,Chemical Engineering,1067895@smc.e
 Emily,Johnson,1019374,555-8765,789 Pine St,Mathematics,1019374@smc.edu,student
 Laura,Martinez,1049583,555-6543,159 Birch St,History,1049583@smc.edu,student
 Jane,Smith,1092873,555-5678,456 Oak St,Biology,1092873@smc.edu,student
-Brian,Walker,1047382,555-2345,741 Maple St,Art,1047382@smc.edu,student
