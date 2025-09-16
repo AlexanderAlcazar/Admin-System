@@ -47,8 +47,8 @@ The project is a full-stack, Java-based student management platform built as an 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/AlexanderAlcazar/CS56Final.git
-   cd CS56Final
+   git clone https://github.com/AlexanderAlcazar/Admin_System.git
+   cd Admin-System
    ```
 
 2. **Build and Run:**
