@@ -1,4 +1,4 @@
-# CS56Final
+# Student-Manager
 
 This repository contains a comprehensive student management system project, implemented entirely from scratch by Alexander Alcazar with the help of a group of students.
 
@@ -47,8 +47,8 @@ The project is a full-stack, Java-based student management platform built as an 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/AlexanderAlcazar/Admin-System.git
-   cd Admin-System
+   git clone https://github.com/AlexanderAlcazar/Student-Manager.git
+   cd Student-Manager
    ```
 
 2. **Build and Run:**
